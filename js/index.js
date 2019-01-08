@@ -44,4 +44,17 @@ $(function() {
 		bounce: true //是否启用回弹
 	})
 
+	$('.xzt ul li').on('click', function() {
+		$(this).css('color', '#f00').siblings().css('color', '#000')
+		$(this).parent().parent().fadeOut(500).siblings().delay(500).fadeIn()
+	})
+
+	$('.screen2 .xzt ul li:nth-of-type(1)').on('click', function() {
+
+	})
+
+	$('.global_xyb,.screen1 .tu5').on('click', function() {
+		mySwiper.slideNext();
+	})
+
 })
