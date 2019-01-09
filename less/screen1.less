@@ -4,14 +4,14 @@
         top: 0;
         left: 0;
         width: 100%;
-        z-index: 999;
+        z-index: 2;
     }
     .global_logo2 {
         position: absolute;
-        bottom: 1rem;
+        bottom: 0.35rem;
         left: 0;
         width: 100%;
-        z-index: 999;
+        z-index: 2;
     }
     .mui-scroll {
         min-height: 11.36rem;
@@ -20,9 +20,27 @@
 }
 
 .global_xyb {
+    position: relative;
+    z-index: 1001;
     width: 188rem/@baseFontSize;
     margin: 20rem/@baseFontSize auto;
 }
+
+@keyframes screen1_tu5 {
+    from {
+      transform: scale(1.2);
+    }
+  }
+
+  @keyframes screen0_tu3 {
+    from {
+      opacity: 0;
+      transform: scale(3);
+    }
+  }
+  .screen0_tu3 {
+    animation-name: screen0_tu3;
+  }
 
 .screen1 {
     .tu4 {
@@ -42,6 +60,7 @@
         position: absolute;
         top: 375rem/@baseFontSize;
         left: 204rem/@baseFontSize;
+        animation: screen1_tu5 1s linear infinite alternate;
     }
     .tu2 {
         width: 100%;
@@ -133,8 +152,58 @@
     }
 }
 
-.screen6 {
+.screen7 {
     .tu {
         width: 100%;
+    }
+    .user {
+        position: absolute;
+        top: 0;
+        bottom: 0;
+        right: 0;
+        left: 0;
+        background-color: rgba(0, 0, 0, 0.7);
+        z-index: 999;
+        .mui-icon-closeempty {
+            position: absolute;
+            top: 0;
+            right: 0;
+            font-size: 46px;
+            color: #fff;
+        }
+        .user_bg {
+            width: 100%;
+            position: absolute;
+            top: 234rem/@baseFontSize;
+        }
+        .content {
+            font-size: 30rem/@baseFontSize;
+            line-height: 1.8;
+            color: #fff;
+            padding-left: 133rem/@baseFontSize;
+            position: absolute;
+            top: 350rem/@baseFontSize;
+            input {
+                width: 300rem/@baseFontSize;
+                height: 40rem/@baseFontSize;
+                padding: 0;
+                color: #000;
+            }
+        }
+
+        .tijiao {
+            width: 100%;
+            position: absolute;
+            top: 660rem/@baseFontSize;
+            span {
+                display: block;
+                line-height: 50rem/@baseFontSize;
+                width: 130rem/@baseFontSize;
+                border: 1px solid #fff;
+                text-align: center;
+                margin: 0 auto;
+                color: #fff;
+            }
+        }
     }
 }
