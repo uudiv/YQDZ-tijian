@@ -1,13 +1,13 @@
 $(function () {
 	//音乐
-	/*function audioAutoPlay(id) {
+	function audioAutoPlay(id) {
 		var audio = document.getElementById(id);
 		audio.play();
 		document.addEventListener("WeixinJSBridgeReady", function() {
 			audio.play();
 		}, false);
 	}
-	audioAutoPlay('musicStar');*/
+	audioAutoPlay('musicStar');
 
 	//swiper-container
 	var mySwiper = new Swiper('.swiper-container', {
