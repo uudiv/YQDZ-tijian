@@ -108,6 +108,8 @@ $(function () {
 		}
 	}
 
+	//留资料
+
 	$('.mui-icon-closeempty').on('click', function () {
 		$('.screen7 .user').fadeOut()
 	})
@@ -131,9 +133,27 @@ $(function () {
 			return false
 		}
 
-		mui.alert('成功参与抽奖！')
-		$('.screen7 .user').fadeOut()
-
+		$.ajax({
+			type: "post",
+			url: "http://h.uudiv.com/api/adduser.php",
+			data: {
+				name: name,
+				phone: phone
+			},
+			dataType: 'json',
+			beforeSend: function () {
+				NProgress.start();
+			},
+			success: function (res) {
+				mui.alert(res.message, '提示', '确认')
+				if (res.success) {
+					$('.screen7 .user').fadeOut()
+				}
+			},
+			complete: function () {
+				NProgress.done();
+			}
+		});
 
 	})
 
